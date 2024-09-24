@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Letterboxd++
 // @namespace    https://github.com/shmup/lbpp
-// @version      1.4
+// @version      1.5
 // @description  Adds custom links under the movie details on Letterboxd.
 // @author
 // @match        https://letterboxd.com/film/*
@@ -11,6 +11,28 @@
 
 (function () {
   "use strict";
+
+  // Centralized styles
+  const styles = `
+    .link-container {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid rgb(0, 172, 28);
+      border-radius: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .custom-link {
+      white-space: nowrap;
+    }
+  `;
+
+  function addStyles(styles) {
+    const styleSheet = document.createElement("style");
+    styleSheet.innerText = styles;
+    document.head.appendChild(styleSheet);
+  }
 
   function getMovieTitle() {
     const titleElement = document.querySelector(
@@ -29,9 +51,9 @@
   function createLink(href, text, icon) {
     const link = document.createElement("a");
     link.href = href;
-    link.textContent = `${icon ? `${icon} ` : ""}${text}`;
+    link.textContent = `${icon ? `${icon}\u00A0` : ""}${text}`;
     link.target = "_blank";
-    link.style.marginRight = "10px";
+    link.classList.add("custom-link");
     return link;
   }
 
@@ -40,10 +62,7 @@
     if (!detailsDiv) return;
 
     const linkContainer = document.createElement("div");
-    linkContainer.style.marginTop = "10px";
-    linkContainer.style.padding = "10px";
-    linkContainer.style.border = "1px solid rgb(0, 172, 28)";
-    linkContainer.style.borderRadius = "5px";
+    linkContainer.classList.add("link-container");
 
     links.forEach(({ href, text, icon }) => {
       const link = createLink(href, text, icon);
@@ -100,6 +119,7 @@
       },
     ];
 
+    addStyles(styles);
     addLinks(links);
   }
 
