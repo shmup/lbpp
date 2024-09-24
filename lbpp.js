@@ -7,7 +7,7 @@
 // @match       https://letterboxd.com/film/*
 // @grant       none
 // @run-at      document-end
-// @version     1.7
+// @version     1.71
 // ==/UserScript==
 
 (function () {
@@ -156,7 +156,7 @@
       {
         text: "TD",
         icon: "https://www.torrentday.com/favicon.ico",
-        href: `https://www.torrentday.com/t?q=${encodeURIComponent(searchQueries.TD)}&qf=#torrents`,
+        href: `https://www.torrentday.com/t?q=${encodeURIComponent(searchQueries.TD)};o=seeders&qf=#torrents`,
       },
       {
         text: "TPB",
