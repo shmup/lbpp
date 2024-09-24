@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Letterboxd++
 // @namespace    https://github.com/shmup/lbpp
-// @version      1.3
+// @version      1.4
 // @description  Adds custom links under the movie details on Letterboxd.
 // @author
 // @match        https://letterboxd.com/film/*
@@ -56,9 +56,12 @@
     if (!movieTitle || !releaseYear) return;
 
     const searchQueries = {
-      YT: `${movieTitle} ${releaseYear} trailer`,
+      BITSEARCH: `${movieTitle} ${releaseYear}`,
+      BTDIG: `${movieTitle} ${releaseYear}`,
       TD: `${movieTitle} ${releaseYear}`,
+      TPB: `${movieTitle} ${releaseYear}`,
       WIKI: `${movieTitle} (${releaseYear} film)`,
+      YT: `${movieTitle} ${releaseYear} trailer`,
     };
 
     const links = [
@@ -69,14 +72,29 @@
       },
       {
         icon: "🔍",
+        text: "WIKI",
+        href: `https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(searchQueries.WIKI)}&ns0=1`,
+      },
+      {
+        icon: "🔍",
         text: "TD",
         href: `https://www.torrentday.com/t?q=${encodeURIComponent(searchQueries.TD)}`,
       },
       {
         icon: "🔍",
-        text: "WIKI",
-        href: `https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(searchQueries.WIKI)}&ns0=1`,
-      }
+        text: "TPB",
+        href: `https://thepiratebay.org/search.php?q=${encodeURIComponent(searchQueries.TPB)}&video=on&search=Pirate+Search&page=0&orderby=`,
+      },
+      {
+        icon: "🔍",
+        text: "BITSEARCH",
+        href: `https://bitsearch.to/search?q=${encodeURIComponent(searchQueries.BITSEARCH)}`,
+      },
+      {
+        icon: "🔍",
+        text: "BTDIG",
+        href: `https://btdig.com/search?q=${encodeURIComponent(searchQueries.BTDIG)}`,
+      },
     ];
 
     addLinks(links);
