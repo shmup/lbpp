@@ -2,8 +2,8 @@
 
 A userscript that detects when on a film page on Letterboxd and adds specified links beneath movie title header.
 
-<a href="https://letterboxd.com/film/scanners/">
-    <img src="https://github.com/user-attachments/assets/7a778bac-40ee-46fa-b8b8-568368be5613" alt="Scanners">
+<a href="https://letterboxd.com/film/angel-terminators/">
+    <img src="https://github.com/user-attachments/assets/22f94b46-8eca-4ce8-b113-56c3f1b29c55" alt="Scanners">
 </a>
 
 ---
