@@ -1,12 +1,13 @@
 // ==UserScript==
-// @name         Letterboxd++
-// @namespace    https://github.com/shmup/lbpp
-// @version      1.5
-// @description  Adds custom links under the movie details on Letterboxd.
-// @author
-// @match        https://letterboxd.com/film/*
-// @grant        none
-// @run-at       document-end
+// @name        Letterboxd++
+// @namespace   https://github.com/shmup/lbpp
+// @description Add customized search links to Letterboxd movie pages
+// @author      Jared Miller (shmup)
+// @license     GPL-3.0-or-later
+// @match       https://letterboxd.com/film/*
+// @grant       none
+// @run-at      document-end
+// @version     1.5
 // ==/UserScript==
 
 (function () {
@@ -106,7 +107,7 @@
       {
         icon: "🔍",
         text: "TD",
-        href: `https://www.torrentday.com/t?q=${encodeURIComponent(searchQueries.TD)}`,
+        href: `https://www.torrentday.com/t?q=${encodeURIComponent(searchQueries.TD)}&qf=#torrents`,
       },
       {
         icon: "🔍",
