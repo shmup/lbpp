@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Letterboxd++
 // @namespace    https://github.com/shmup/lbpp
-// @version      1.0
+// @version      1.1
 // @description  Adds custom links under the movie details on Letterboxd.
 // @author
 // @match        https://letterboxd.com/film/*
@@ -61,7 +61,13 @@
       WIKI: `${movieTitle} (${releaseYear} film)`,
     };
 
-    const links = [];
+    const links = [
+      {
+        icon: "🔍",
+        text: "YT",
+        href: `https://www.youtube.com/results?search_query=${encodeURIComponent(searchQueries.YT)}`,
+      },
+    ];
 
     addLinks(links);
   }
