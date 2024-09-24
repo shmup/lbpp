@@ -71,16 +71,8 @@
     return yearElement ? yearElement.textContent.trim() : null;
   }
 
-  function getDomain(url) {
-    try {
-      return new URL(url).hostname;
-    } catch {
-      return null;
-    }
-  }
-
   function createLink(href, text, icon) {
-    const domain = getDomain(href);
+    const domain = new URL(href).hostname;
     const faviconUrl =
       icon || `https://www.google.com/s2/favicons?domain=${domain}`;
 
