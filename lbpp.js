@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Letterboxd++
 // @namespace    https://github.com/shmup/lbpp
-// @version      1.1
+// @version      1.2
 // @description  Adds custom links under the movie details on Letterboxd.
 // @author
 // @match        https://letterboxd.com/film/*
@@ -66,6 +66,11 @@
         icon: "🔍",
         text: "YT",
         href: `https://www.youtube.com/results?search_query=${encodeURIComponent(searchQueries.YT)}`,
+      },
+      {
+        icon: "🔍",
+        text: "TD",
+        href: `https://www.torrentday.com/t?q=${encodeURIComponent(searchQueries.TD)}`,
       },
     ];
 
