@@ -41,6 +41,9 @@
 
     const linkContainer = document.createElement("div");
     linkContainer.style.marginTop = "10px";
+    linkContainer.style.padding = "10px";
+    linkContainer.style.border = "1px solid rgb(0, 172, 28)";
+    linkContainer.style.borderRadius = "5px";
 
     links.forEach(({ href, text, icon }) => {
       const link = createLink(href, text, icon);
