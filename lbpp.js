@@ -95,6 +95,7 @@
       TPB: `${movieTitle} ${releaseYear}`,
       WIKI: `${movieTitle} (${releaseYear} film)`,
       YT: `${movieTitle} ${releaseYear} trailer`,
+      IA: `title:(${movieTitle}) AND mediatype:(movies)`,
     };
 
     const links = [
@@ -102,6 +103,11 @@
         icon: "🔍",
         text: "YT",
         href: `https://www.youtube.com/results?search_query=${encodeURIComponent(searchQueries.YT)}`,
+      },
+      {
+        icon: "🔍",
+        text: "IA",
+        href: `https://archive.org/search.php?query=${encodeURIComponent(searchQueries.IA)}`,
       },
       {
         icon: "🔍",
@@ -120,13 +126,13 @@
       },
       {
         icon: "🔍",
-        text: "BITSEARCH",
-        href: `https://bitsearch.to/search?q=${encodeURIComponent(searchQueries.BITSEARCH)}`,
+        text: "BTDIG",
+        href: `https://btdig.com/search?q=${encodeURIComponent(searchQueries.BTDIG)}`,
       },
       {
         icon: "🔍",
-        text: "BTDIG",
-        href: `https://btdig.com/search?q=${encodeURIComponent(searchQueries.BTDIG)}`,
+        text: "BITSEARCH",
+        href: `https://bitsearch.to/search?q=${encodeURIComponent(searchQueries.BITSEARCH)}`,
       },
     ];
 
