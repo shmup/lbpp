@@ -7,7 +7,7 @@
 // @match       https://letterboxd.com/film/*
 // @grant       none
 // @run-at      document-end
-// @version     1.63
+// @version     1.7
 // ==/UserScript==
 
 (function () {
@@ -79,9 +79,10 @@
     }
   }
 
-  function createLink(href, text) {
+  function createLink(href, text, icon) {
     const domain = getDomain(href);
-    const faviconUrl = `https://www.google.com/s2/favicons?domain=${domain}`;
+    const faviconUrl =
+      icon || `https://www.google.com/s2/favicons?domain=${domain}`;
 
     const link = document.createElement("a");
     link.href = href;
@@ -115,8 +116,8 @@
     const flexContainer = document.createElement("div");
     flexContainer.classList.add("links-flex");
 
-    links.forEach(({ href, text }) => {
-      const link = createLink(href, text);
+    links.forEach(({ href, text, icon = "" }) => {
+      const link = createLink(href, text, icon);
       flexContainer.appendChild(link);
     });
 
@@ -154,6 +155,7 @@
       },
       {
         text: "TD",
+        icon: "https://www.torrentday.com/favicon.ico",
         href: `https://www.torrentday.com/t?q=${encodeURIComponent(searchQueries.TD)}&qf=#torrents`,
       },
       {
