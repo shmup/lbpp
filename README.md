@@ -1,9 +1,9 @@
 ## Letterboxd++
 
-A userscript that detects when on a film page on Letterboxd and adds specified links beneath movie title header.
+Add search links to Letterboxd film pages.
 
-<a href="https://letterboxd.com/film/angel-terminators/">
-    <img src="https://github.com/user-attachments/assets/22f94b46-8eca-4ce8-b113-56c3f1b29c55" alt="Scanners">
+<a href="https://letterboxd.com/film/beetlejuice/">
+    <img src="https://github.com/user-attachments/assets/14a4a07b-1098-4b34-93c3-3875d9c213c3" alt="Beetlejuice">
 </a>
 
 ---
