@@ -7,19 +7,23 @@
 // @match       https://letterboxd.com/film/*
 // @grant       none
 // @run-at      document-end
-// @version     1.5
+// @version     1.6
 // ==/UserScript==
 
 (function () {
   "use strict";
 
   const styles = `
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
   .link-container {
     margin-top: 10px;
     padding: 10px;
     border: 1px solid rgb(0, 172, 28);
     border-radius: 5px;
-    display: inline-block; /* Changed from flex to inline-block */
+    display: inline-block;
   }
   .links-flex {
     display: flex;
