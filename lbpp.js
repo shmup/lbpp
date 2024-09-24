@@ -7,7 +7,7 @@
 // @match       https://letterboxd.com/film/*
 // @grant       none
 // @run-at      document-end
-// @version     1.6
+// @version     1.61
 // ==/UserScript==
 
 (function () {
