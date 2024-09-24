@@ -12,21 +12,23 @@
 (function () {
   "use strict";
 
-  // Centralized styles
   const styles = `
-    .link-container {
-      margin-top: 10px;
-      padding: 10px;
-      border: 1px solid rgb(0, 172, 28);
-      border-radius: 5px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .custom-link {
-      white-space: nowrap;
-    }
-  `;
+  .link-container {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid rgb(0, 172, 28);
+    border-radius: 5px;
+    display: inline-block; /* Changed from flex to inline-block */
+  }
+  .links-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .custom-link {
+    white-space: nowrap;
+  }
+`;
 
   function addStyles(styles) {
     const styleSheet = document.createElement("style");
@@ -64,11 +66,15 @@
     const linkContainer = document.createElement("div");
     linkContainer.classList.add("link-container");
 
+    const flexContainer = document.createElement("div");
+    flexContainer.classList.add("links-flex");
+
     links.forEach(({ href, text, icon }) => {
       const link = createLink(href, text, icon);
-      linkContainer.appendChild(link);
+      flexContainer.appendChild(link);
     });
 
+    linkContainer.appendChild(flexContainer);
     detailsDiv.appendChild(linkContainer);
   }
 
