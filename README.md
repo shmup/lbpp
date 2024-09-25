@@ -2,9 +2,7 @@
 
 Add search links to Letterboxd film pages.
 
-<a href="https://letterboxd.com/film/beetlejuice/">
-    <img src="https://github.com/user-attachments/assets/14a4a07b-1098-4b34-93c3-3875d9c213c3" alt="Beetlejuice">
-</a>
+![Beetlejuice](https://github.com/user-attachments/assets/14a4a07b-1098-4b34-93c3-3875d9c213c3)
 
 ---
 
