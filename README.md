@@ -2,7 +2,8 @@
 
 Add search links to Letterboxd film pages.
 
-![Beetlejuice](https://github.com/user-attachments/assets/14a4a07b-1098-4b34-93c3-3875d9c213c3)
+![The Greasy Strangler](https://github.com/user-attachments/assets/f5a82aea-8681-4926-9178-011a847e0530)
+
 
 ---
 
